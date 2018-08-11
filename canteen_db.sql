@@ -7,7 +7,7 @@
 #
 # Host: localhost (MySQL 5.7.17)
 # Database: canteen
-# Generation Time: 2018-08-05 21:03:11 +0000
+# Generation Time: 2018-08-11 22:04:13 +0000
 # ************************************************************
 
 
@@ -24,12 +24,11 @@
 # ------------------------------------------------------------
 
 CREATE TABLE `items` (
-  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `transaction_id` int(11) NOT NULL,
-  `name` int(11) DEFAULT NULL,
+  `sequence_id` int(11) unsigned NOT NULL,
+  `transaction_id` int(11) unsigned NOT NULL,
+  `name` varchar(50) DEFAULT NULL,
   `price` decimal(5,2) DEFAULT NULL,
-  `paymentType` varchar(50) DEFAULT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`transaction_id`,`sequence_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
@@ -44,7 +43,7 @@ CREATE TABLE `transactions` (
   `amount` decimal(5,2) DEFAULT NULL,
   `location` varchar(100) DEFAULT NULL,
   `balance` decimal(5,2) DEFAULT NULL,
-  `detailLoaded` tinyint(1) NOT NULL DEFAULT '0',
+  `moneyFormat` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
