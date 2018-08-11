@@ -25,8 +25,8 @@ db = MySQLdb.connect(host="localhost", user="root", passwd="", db="canteen", cha
 summary_url_template = "https://newsbuilding.systopiacloud.com/History/Transactions?page={page}"
 detail_url_template = "https://newsbuilding.systopiacloud.com/History/Transaction?transId={transaction_id}"
 jar = requests.cookies.RequestsCookieJar()
-jar.set('__RequestVerificationToken','OOZbRfZYcVH_y354bIRRdL9SGdSLZ9kiLTPQIn3zDcvf7CRiJQBy1xsdFBq3J5P9I47kr5N7plmKS7qWa2KwRu6ZyyKBR9aLcIDIb0W6krk1')
-jar.set('.AspNet.ApplicationCookie','TOGgqRRcdbnT38p4tuWvBt84NC2lJaEZvpHrrUZcTgu-_A5gikHph-JpFUa1OU8aGO8vwCr9ayLIYCBCA6udXSp5vu9p37PFX-leBXpxrSRijaP8ax_WFVWoVQ_WAv1Gr8-i8dD-lx9Kf-b0uLnGd2g44IVHNEUGF-xij6hZaPjYXjCsyp0pSq8tgcfChEvm3ChR4fn3n9gWStC-LTw5xLWymg50AmeqdYr1Z_ZvzO39ef5POZ8pgTQ-IUezdk6zkJ-dlMtcKYcsOMzgH2s_kegnG-j9tmkzimzSvEms9y3mfj31tb2M6dDPffcZb8dAUNDpus5xYGL4ZaSLt02cKN7BL3qpkFLeM1TtJYkiI4ytz0BAWhGrp1RfSabe9EiOrpVKLOBUkzrf90A5PSeYeR2QElDfzk0rAH3eSG5-yVJs9T_RUvFSEmnWf5j53SW_TtEr3ULs68Bi7_4weubRCQ')
+jar.set('__RequestVerificationToken','')
+jar.set('.AspNet.ApplicationCookie','')
 
 field_handlers = {
     'Details':'./button/@onclick'
